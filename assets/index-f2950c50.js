@@ -121,6 +121,7 @@ Error generating stack: `+i.message+`
   width: 100vw;
 
   .contact-button {
+    margin-top: 9px;
     grid-column: 3;
   }
 
@@ -128,7 +129,7 @@ Error generating stack: `+i.message+`
     color: #f5e4e4;
     display: grid;
     grid-template-columns: 10px auto auto 1fr;
-    row-gap: 3px;
+    row-gap: 10px;
     width: fit-content;
   }
 
@@ -196,29 +197,29 @@ Error generating stack: `+i.message+`
 
   .contact-headinfo-1,
   .contact-headinfo-2 {
-    background-color: rgb(54, 134, 64, 0.8);
-    box-shadow: 2px 2px 30px rgb(255, 204, 0, 0.5),
-      2px 2px 30px rgb(255, 204, 0, 0.5);
     border-radius: 30px;
     color: #ffffff;
-    font-size: 0.86rem;
+    font-size: 0.97rem;
     margin-top: 0;
     margin-bottom: 25px;
     padding: 5px;
-    text-shadow: 2px 2px 5px black, -2px -2px 5px black, -2px -2px 15px #fc0,
-      2px 2px 15px #fc0;
   }
 
   .contact-headinfo-1 {
-    background-color: rgb(47, 53, 37, 0.3);
-    box-shadow: 2px 2px 20px rgb(40, 40, 39, 0.3),
-      2px 2px 20px rgb(82, 83, 67, 0.3);
+    background-color: rgb(49, 78, 0, 0.7);
+    box-shadow: 2px 2px 5px rgb(40, 40, 39, 0.6),
+      2px 2px 5px rgb(82, 83, 67, 0.3);
     text-shadow: 2px 2px 5px black, -2px -2px 5px black, 2px -2px 5px #1b1b14,
-      -2px -2px 15px rgb(82, 83, 67, 0.3), 2px 2px 15px rgb(82, 83, 67, 0.3);
+      -2px -2px 15px rgb(82, 83, 67, 0.8), 2px 2px 15px rgb(82, 83, 67, 0.8);
   }
 
   .contact-headinfo-2 {
     margin-top: 55px;
+    background-color: rgb(54, 134, 64, 0.8);
+    box-shadow: 2px 2px 30px rgb(255, 204, 0, 0.8),
+      2px 2px 30px rgb(255, 204, 0, 0.8);
+    text-shadow: 2px 2px 5px black, -2px -2px 5px black, -2px -2px 15px #fc0,
+      2px 2px 15px #fc0;
   }
 
   .contact-head-container {
@@ -265,6 +266,7 @@ Error generating stack: `+i.message+`
 
   h1 {
     font-size: 1.8rem;
+    margin-top: 50px;
     margin-bottom: 5px;
   }
 
@@ -293,6 +295,7 @@ Error generating stack: `+i.message+`
   }
 
   .recipes-section-h1 {
+    margin-top: 60px;
     color: #2d1a33;
   }
 
@@ -534,6 +537,8 @@ Error generating stack: `+i.message+`
     height: 100px;
     padding-top: 10px;
     padding-right: 7px;
+    margin-top: 10px;
+    margin-right: 2px;
     text-align: end;
     width: 90px;
     z-index: 4;
@@ -541,7 +546,7 @@ Error generating stack: `+i.message+`
       justify-content: flex-end;
     }
   }
-`;function B_(e){const{id:t}=Kg(),n=yi(a=>a.flowers),r=yi(a=>a.recipes),o=E.useMemo(()=>t!==void 0?r&&r.find(a=>a.id===parseInt(t)):null,[r,t]),i=E.useMemo(()=>(o==null?void 0:o.flowerIds)??[],[o]),l=E.useMemo(()=>n==null?void 0:n.filter(a=>i.includes(a.id)),[n,i]);return T.jsx("div",{className:e.className,children:o&&T.jsxs("div",{className:"recipe-container",children:[T.jsxs("article",{style:{padding:" 7% 0 20px 10%",width:"400px;"},children:[T.jsxs("h1",{children:[o.title," "]}),T.jsxs("p",{children:["Källa: ",o.source]}),T.jsxs("section",{children:[T.jsx("h2",{children:"Ingredienser"}),T.jsx("ul",{children:o.ingredients.map((a,u)=>T.jsxs("li",{children:[a.amount," ",a.unit," ",a.ingredient]},u))})]}),T.jsxs("section",{children:[T.jsx("h2",{children:"Beredning"}),T.jsx("ol",{children:o.method.map((a,u)=>T.jsx("li",{children:a},u))})]})]}),T.jsxs("article",{style:{width:"230px",backgroundColor:"rgb(211, 205, 192)",marginTop:0,minHeight:"100vh"},children:[T.jsx("h2",{className:"recipe-flowers-used-h2",children:"Blommor i receptet:"}),T.jsx("ul",{className:"recipe-flowers-used",children:l.map((a,u)=>T.jsx("li",{children:T.jsxs(fr,{to:`/flower/${a.id}`,children:[T.jsx("img",{src:a.img,alt:a.name}),T.jsx("p",{children:a.name})]})},u))})]})]})})}const V_=Bt(B_)`
+`;function B_(e){const{id:t}=Kg(),n=yi(a=>a.flowers),r=yi(a=>a.recipes),o=E.useMemo(()=>t!==void 0?r&&r.find(a=>a.id===parseInt(t)):null,[r,t]),i=E.useMemo(()=>(o==null?void 0:o.flowerIds)??[],[o]),l=E.useMemo(()=>n==null?void 0:n.filter(a=>i.includes(a.id)),[n,i]);return T.jsx("div",{className:e.className,children:o&&T.jsxs("div",{className:"recipe-container",children:[T.jsxs("article",{style:{padding:" 7% 0 20px 10%",width:"400px;"},children:[T.jsxs("h1",{children:[o.title," "]}),T.jsxs("p",{style:{marginBottom:50},children:["Källa: ",o.source]}),T.jsxs("section",{children:[T.jsx("h2",{children:"Ingredienser"}),T.jsx("ul",{children:o.ingredients.map((a,u)=>T.jsxs("li",{children:[a.amount," ",a.unit," ",a.ingredient]},u))})]}),T.jsxs("section",{children:[T.jsx("h2",{children:"Beredning"}),T.jsx("ol",{children:o.method.map((a,u)=>T.jsx("li",{children:a},u))})]})]}),T.jsxs("article",{style:{width:"230px",backgroundColor:"rgb(211, 205, 192)",marginTop:0,minHeight:"100vh"},children:[T.jsx("h2",{className:"recipe-flowers-used-h2",children:"Blommor i receptet:"}),T.jsx("ul",{className:"recipe-flowers-used",children:l.map((a,u)=>T.jsx("li",{children:T.jsxs(fr,{to:`/flower/${a.id}`,children:[T.jsx("img",{src:a.img,alt:a.name}),T.jsx("p",{children:a.name})]})},u))})]})]})})}const V_=Bt(B_)`
   background-color: #b2cad5;
   color: #1b1b1b;
   height: 100vh;
@@ -559,14 +564,15 @@ Error generating stack: `+i.message+`
 
   h1 {
     font-size: 2rem;
+    margin-top: 0px;
     margin-bottom: 0;
     padding-right: 60px;
   }
 
   h2 {
     font-size: 1.3em;
-    margin-top: 27px;
-    margin-bottom: 40px;
+    margin-top: 35px;
+    margin-bottom: 20px;
   }
 
   ol,
@@ -626,6 +632,8 @@ Error generating stack: `+i.message+`
   .recipe-flowers-used-h2 {
     color: #241554;
     margin-left: 28px;
+    margin-top: 63px;
+    margin-bottom: 43px;
   }
 
   @media (min-width: 704px) and (max-width: 750px) {
